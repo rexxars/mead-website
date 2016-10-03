@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mead image transformer</title>
+    <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64 128x128 256x256" href="/favicon.ico">
+    <link rel="stylesheet" href="/assets/reset.css?v=1">
+    <link rel="stylesheet" href="/assets/style.css?v=1">
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/docs">Docs</a></li>
+          <li><a href="https://github.com/rexxars/mead">GitHub</a></li>
+        </ul>
+      </nav>
+      <div class="splash">
+        <h1><img src="/assets/logo.svg" class="logo"> mead</h1>
+        <p>Powerful and fast on-the-fly image transformer.</p>
+
+        <p class="lead-in">
+          <a class="get-started-button" href="/docs/get-started.html">Get started</a>
+        </p>
+      </div>
+    </header>
+
+    <main class="features">
+      <h2>Features</h2>
+
+      <ul>
+        <!-- Backends -->
+        <li class="feature">
+          <div class="feature-description">
+            <h3>Backend agnostic</h3>
+            <p>Supports common image sources out of the box - Amazon S3, Google Cloud Storage, remote HTTP source, local filesystem.</p>
+            <p>Adding support for other sources is easy with the Mead plugin architecture.</p>
+          </div>
+          <a class="feature-image" href="/docs/source-adapters.html">
+            <img src="assets/sources.png">
+          </a>
+        </li>
+
+        <!-- Performance -->
+        <li class="feature">
+          <div class="feature-description">
+            <h3>Great performance</h3>
+            <p>Image transformations are fast, utilizing the blazingly fast <a href="https://github.com/jcupitt/libvips">libvips</a> image processing library.</p>
+            <p>Resizing an image is typically 4x-5x faster than using the quickest ImageMagick and GraphicsMagick settings.</p>
+          </div>
+          <a class="feature-image" href="/docs/performance.html">
+            <img src="assets/speed.svg" width="200">
+          </a>
+        </li>
+
+        <!-- Focal point cropping -->
+        <li class="feature">
+          <div class="feature-description">
+            <h3>Focal point cropping</h3>
+            <p>Using focal point cropping, crops are smarter and will prevent removal of key features of images.</p>
+            <p>Future releases will support fetching metadata such as focal points from configurable sources, enabling face and feature detection.</p>
+          </div>
+          <a class="feature-image" href="/docs/transformations.html#focal-crop">
+            <img src="assets/focal-crop.jpg">
+          </a>
+        </li>
+
+        <!-- DPR / Client Hints -->
+        <li class="feature">
+          <div class="feature-description">
+            <h3>DPR-aware with client hints</h3>
+            <p>In todays world of high-resolution displays, you'll want to deliver images that look crystal clear to any user, regardless of their device. Mead allows you to either specify a Device Pixel Ratio (DPR), or have modern browsers report the DPR of the display using Client Hints, seamlessly giving the user the best fit for her device.</p>
+          </div>
+          <a class="feature-image" href="/docs/transformations.html#dpr">
+            <img src="assets/dpr.png">
+          </a>
+        </li>
+
+        <!-- Transformations -->
+        <li class="feature">
+          <div class="feature-description">
+            <h3>Rich transformations</h3>
+            <p>In addition to resizing and cropping, Mead also supports various filter-like transformations.</p>
+            <p>Inverting colors, blurring or sharpening, trimming or padding - a wide range of filters are available by default, and further transformations may also be provided by plugins.</p>
+          </div>
+          <a class="feature-image" href="/docs/transformations.html">
+            <img src="assets/blur.jpg">
+          </a>
+        </li>
+
+        <!-- EXIF-rotate -->
+        <li class="feature">
+          <div class="feature-description">
+            <h3>Rotate images by EXIF</h3>
+            <p>Mead automatically rotates images by the EXIF-orientation stored within the image metadata.</p>
+            <p>Orientation can also be explicitly specified as a transformation, along with any width/height constraints, crops etc.</p>
+          </div>
+          <a class="feature-image" href="/docs/transformations.html#orientation">
+            <img src="assets/exif.jpg">
+          </a>
+        </li>
+
+        <!-- Optional signed URLs -->
+        <li class="feature">
+          <div class="feature-description">
+            <h3>Signed URLs (optional)</h3>
+            <p>Image URLs can be signed to prevent users from generating arbitrary transformations.</p>
+            <p>This feature can be enabled/disabled on a per-source basis, depending on your use case.</p>
+          </div>
+          <a class="feature-image" href="/docs/signed-urls.html">
+            <img src="assets/lock.svg" width="200">
+          </a>
+        </li>
+      </ul>
+    </main>
+
+  </body>
+</html>

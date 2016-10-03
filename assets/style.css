@@ -1,0 +1,174 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Source+Code+Pro);
+
+/* # =================================================================
+   # Basic site-wide rules
+   # ================================================================= */
+
+html, head, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  color: #242629;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+main h2 {
+  font-size: 3em;
+  text-align: center;
+  margin: 80px 0;
+}
+
+/* # =================================================================
+   # Header/splash
+   # ================================================================= */
+header {
+  background: #f39c12;
+  color: #fff;
+}
+
+nav {
+  padding: 1em;
+}
+
+.main-nav {
+  list-style-type: none;
+  text-align: center;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
+.main-nav a {
+
+  text-transform: lowercase;
+  color: #2c3e50;
+  padding-bottom: 0.5em;
+  margin: 0 1.5em;
+  font-size: 1.25em;
+}
+
+.splash {
+  text-align: center;
+  margin-top: 3em;
+  padding-bottom: 1em;
+}
+
+.splash h1 {
+  font-size: 7.6em;
+  letter-spacing: -4px;
+  position: relative;
+}
+
+.splash .logo {
+  height: 100%;
+  position: absolute;
+  margin: -55px 0 0 -66px;
+}
+
+.splash p {
+  font-size: 1.6em;
+}
+
+.lead-in {
+  margin: 2em 0 1em 0;
+}
+
+.get-started-button {
+  border: 1px solid #242629;
+  color: #242629;
+  padding: 0.5em;
+}
+
+.get-started-button:hover {
+  text-decoration: none;
+  background: #242629;
+  color: #fff;
+}
+
+/* # =================================================================
+   # Features
+   # ================================================================= */
+.features {
+  margin: 0 auto;
+}
+
+.features ul {
+  list-style-type: none;
+}
+
+.features h3 {
+  font-size: 1.5em;
+}
+
+.feature-description p {
+  margin: 0.75em 0;
+}
+
+.feature-image {
+  text-align: center;
+  width: 420px;
+}
+
+@media (max-width: 820px) {
+  .feature {
+    margin: 4em 0;
+  }
+
+  .feature-description h3 {
+    text-align: center;
+  }
+
+  .feature-description {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .feature-image {
+    max-width: 420px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 820px) {
+  .features {
+    max-width: 800px;
+  }
+
+  .feature {
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 4em;
+  }
+
+  .feature-description {
+    max-width: 340px;
+  }
+
+  .feature-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
