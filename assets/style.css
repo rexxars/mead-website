@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Source+Code+Pro);
-
+/*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Source+Code+Pro);
+*/
 /* # =================================================================
    # Basic site-wide rules
    # ================================================================= */
@@ -59,12 +59,34 @@ nav {
 }
 
 .main-nav a {
-
   text-transform: lowercase;
   color: #2c3e50;
   padding-bottom: 0.5em;
-  margin: 0 1.5em;
+  padding: 0 1.5em;
   font-size: 1.25em;
+}
+
+/* Make top navigation usable on smaller screens */
+@media (max-width: 500px) {
+  .main-nav .nav-logo {
+    display: none;
+  }
+
+  .main-nav a {
+    padding: 0 1.1em;
+  }
+}
+
+.nav-logo img {
+  height: 46px;
+  position: absolute;
+  margin-left: -46px;
+  margin-top: -12px;
+}
+
+.nav-logo em {
+  text-indent: -50000em;
+  display: inline-block;
 }
 
 .splash {
@@ -170,5 +192,78 @@ nav {
     position: absolute;
     top: 0;
     right: 0;
+  }
+}
+
+/* # =================================================================
+   # Documentation
+   # ================================================================= */
+.docs {
+  margin: 0 auto;
+  padding: 0 1em;
+  padding-left: 220px;
+  max-width: 800px;
+}
+
+.doc-nav-container {
+  padding: 0;
+}
+
+.doc-nav {
+  background: #fafafa;
+  border-right: 1px solid #e8e8e8;
+  width: 220px;
+  list-style-type: none;
+  position: fixed;
+  top: 55px;
+  bottom: 0;
+}
+
+.doc-hamburger {
+  position: fixed;
+  top: 55px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  font-size: 1.2em;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.doc-nav a {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 2.5em;
+  padding-left: 0.5em;
+}
+
+.doc-nav .sub a {
+  padding-left: 1.75em;
+}
+
+/* Make side documentation navigation usable on smaller screens */
+.doc-hamburger {
+  display: none;
+}
+
+@media (max-width: 975px) {
+  .docs {
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+
+  .doc-nav {
+    display: none;
+  }
+
+  .doc-nav.forced {
+    display: block;
+    border-top: 50px solid #fafafa; /* Height of hamburger */
+  }
+
+  .doc-hamburger {
+    display: block;
   }
 }
